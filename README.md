@@ -1,48 +1,12 @@
-# 🎧 Moodify
+# React + Vite
 
-**Moodify** é um aplicativo de recomendação de músicas baseado no humor do usuário. A proposta é simples: você informa como está se sentindo, e o app te entrega músicas que combinam com esse estado emocional — seja tristeza, felicidade, cansaço ou pura animação!
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 💡 Ideia Principal
+Currently, two official plugins are available:
 
-A música tem o poder de nos conectar com nossos sentimentos. Pensando nisso, o Moodify foi criado com o objetivo de proporcionar uma experiência personalizada ao usuário, oferecendo trilhas sonoras de acordo com seu **estado emocional atual**.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-> 😢 Está triste? Receba indicações de músicas mais melancólicas.  
-> 😀 Está feliz? Aproveite uma playlist com batidas alegres.  
-> 💤 Está cansado? Que tal algo mais relaxante?  
-> 💥 Está animado? Aumenta o som com os hits mais energéticos!
+## Expanding the ESLint configuration
 
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- **Frontend:** React Native (ou Vue/React, dependendo da escolha futura)
-- **Backend:** Node.js / Python (FastAPI, Flask, ou outro)
-- **Banco de dados:** Firebase / MongoDB / PostgreSQL
-- **APIs externas:** Spotify API ou outras para buscar músicas
-
----
-
-## ✨ Funcionalidades (em desenvolvimento)
-
-- [x] Interface amigável para informar o sentimento
-- [ ] Sistema de recomendação de músicas por emoção
-- [ ] Histórico de emoções e músicas
-- [ ] Integração com o Spotify
-- [ ] Login com conta do Google ou e-mail
-
----
-
-## 🚀 Como rodar o projeto localmente
-
-```bash
-# Clone o repositório
-git clone https://github.com/codecomnick/moodify.git
-
-# Acesse a pasta
-cd moodify
-
-# Instale as dependências (exemplo para Node.js)
-npm install
-
-# Rode a aplicação
-npm start
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
