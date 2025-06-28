@@ -4,6 +4,12 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const navigate = useNavigate();
 
+  // Função para lidar com o submit do formulário
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Evita o reload da página
+    navigate('/inicio'); // Redireciona para a página Inicio
+  };
+
   return (
     <div className="home">
       <header className="home-header">
@@ -24,7 +30,7 @@ const Login = () => {
           <div className="login-logo">
             <span>:):</span>
           </div>
-          <form className="login-form">
+          <form className="login-form" onSubmit={handleSubmit}>
             <label>Email</label>
             <input type="email" placeholder="Email" />
             <label>Password</label>
