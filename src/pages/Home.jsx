@@ -1,14 +1,21 @@
-import React from 'react';
-import './Home.css'; // Add styles for the page
+import './Home.css';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="home">
       <header className="home-header">
         <div className="logo">:): Moodify</div>
         <div className="auth-buttons">
           <button className="register-button">Cadastro</button>
-          <button className="login-button">Login</button>
+          <button
+            className="login-button"
+            onClick={() => navigate('/login')}
+          >
+            Login
+          </button>
         </div>
       </header>
       <main className="home-main">
@@ -17,7 +24,12 @@ const Home = () => {
           Escolha como você está se sentindo e descubra a trilha sonora perfeita
           para o seu momento.
         </p>
-        <button className="start-button">Começar agora</button>
+        <button
+          className="start-button"
+          onClick={() => navigate('/login')}
+        >
+          Começar agora
+        </button>
         <div className="mood-colors">
           <div className="color-box green"></div>
           <div className="color-box red"></div>
