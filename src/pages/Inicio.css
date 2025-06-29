@@ -37,15 +37,21 @@
 }
 
 .moods-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 180px);
-  grid-template-rows: repeat(2, 120px);
-  gap: 35px 40px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
   align-items: center;
 }
 
+.moods-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
 .mood-box {
+  width: 150px;
+  height: 150px;
   border: none;
   border-radius: 20px;
   color: white;
@@ -66,5 +72,5 @@
 .mood-box.blue { background: #0477B9; }
 
 .mood-box:hover {
-    transform: scale(1.07);
+  transform: scale(1.07);
 }

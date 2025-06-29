@@ -22,11 +22,15 @@ const Inicio = () => {
       <main className="inicio-main">
         <h1>Escolha o seu mood e aproveite a trilha sonora</h1>
         <div className="moods-grid">
-          <button className="mood-box green">Calmo</button>
-          <button className="mood-box red">Estressado</button>
-          <button className="mood-box yellow">Feliz</button>
-          <button className="mood-box purple">Animado</button>
-          <button className="mood-box blue">Triste</button>
+          <div className="moods-row">
+            <button className="mood-box green">Calmo</button>
+            <button className="mood-box red">Estressado</button>
+            <button className="mood-box yellow">Feliz</button>
+          </div>
+          <div className="moods-row">
+            <button className="mood-box purple">Animado</button>
+            <button className="mood-box blue">Triste</button>
+          </div>
         </div>
       </main>
     </div>
