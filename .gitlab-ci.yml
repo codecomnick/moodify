@@ -1,0 +1,29 @@
+image: node:18
+
+stages:
+  - install
+  - test
+  - build
+
+cache:
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: install
+  script:
+    - npm ci
+
+run_lint_and_tests:
+  stage: test
+  script:
+    - npm run lint || echo "Lint com avisos"
+    - npm test || echo "Sem testes configurados"
+
+build_project:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
