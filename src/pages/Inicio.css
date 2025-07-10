@@ -4,22 +4,6 @@
   gap: 20px;
 }
 
-.nav-btn {
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: 18px;
-  color: black;
-  padding: 8px 18px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.nav-btn.active {
-  background: black;
-  color: white;
-}
-
 .inicio-main {
   flex: 1;
   display: flex;
@@ -32,20 +16,20 @@
   color: white;
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 60px 0 40px 0;
+  margin: 50px 0 60px 0;
   text-align: center;
 }
 
 .moods-grid {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 60px;
   align-items: center;
 }
 
 .moods-row {
   display: flex;
-  gap: 40px;
+  gap: 60px;
   justify-content: center;
 }
 
@@ -59,7 +43,6 @@
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   display: flex;
   align-items: center;
   justify-content: center;

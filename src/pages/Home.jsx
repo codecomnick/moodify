@@ -13,8 +13,9 @@ const Home = () => {
       <main className="home-main">
         <h1>Transforme seu humor em música!</h1>
         <p>
-          Escolha como você está se sentindo e descubra a trilha sonora perfeita
-          para o seu momento.
+          Escolha como você está se sentindo e
+          <br></br>
+          descubra a trilha sonora perfeita para o seu momento.
         </p>
         <button
           className="start-button"
