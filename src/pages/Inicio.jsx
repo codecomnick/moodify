@@ -14,10 +14,6 @@ const Inicio = () => {
         >
           :): Moodify
         </div>
-        <nav className="inicio-nav">
-          <button className="nav-btn active">Home</button>
-          <button className="nav-btn">Histórico</button>
-        </nav>
       </header>
       <main className="inicio-main">
         <h1>Escolha o seu mood e aproveite a trilha sonora</h1>

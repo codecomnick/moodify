@@ -8,15 +8,7 @@ const Home = () => {
     <div className="home">
       <header className="home-header">
         <div className="logo">:): Moodify</div>
-        <div className="auth-buttons">
-          <button className="register-button">Cadastro</button>
-          <button
-            className="login-button"
-            onClick={() => navigate('/login')}
-          >
-            Login
-          </button>
-        </div>
+  
       </header>
       <main className="home-main">
         <h1>Transforme seu humor em música!</h1>
@@ -26,7 +18,7 @@ const Home = () => {
         </p>
         <button
           className="start-button"
-          onClick={() => navigate('/login')}
+          onClick={() => navigate('/inicio')}
         >
           Começar agora
         </button>
