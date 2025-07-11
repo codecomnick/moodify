@@ -27,3 +27,6 @@ jobs:
 
       - name: Verificar se a build foi gerada com sucesso
         run: ls -l dist
+      
+      - name: Mensagem de sucesso
+        run: echo "Build concluída com sucesso!"
