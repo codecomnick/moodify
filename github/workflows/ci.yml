@@ -1,0 +1,29 @@
+name: CI - Moodify React
+
+on:
+  push:
+    branches: [feature]
+  pull_request:
+    branches: [feature]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Build do projeto
+        run: npm run build
+
+      - name: Verificar se a build foi gerada com sucesso
+        run: ls -l dist
