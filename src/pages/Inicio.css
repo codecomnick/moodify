@@ -21,14 +21,21 @@
 }
 
 .moods-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 60px;
-  align-items: center;
+  justify-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.moods-grid.second {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .moods-row {
   display: flex;
+  flex-direction: column;
   gap: 60px;
   justify-content: center;
 }

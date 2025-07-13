@@ -1,8 +1,29 @@
 import './Inicio.css';
 import { useNavigate } from 'react-router-dom';
 
+const moodMap = {
+  calmo: "relaxing",
+  estressado: "angry",
+  feliz: "happy",
+  animado: "energetic",
+  triste: "sad",
+};
+
+const moodColorMap = {
+  calmo: "green",
+  estressado: "red",
+  feliz: "yellow",
+  animado: "purple",
+  triste: "blue",
+};
+
 const Inicio = () => {
   const navigate = useNavigate();
+
+  const handleClick = (humor) => {
+    navigate("/musica", { state: { humor: moodMap[humor] } });
+  };
+
 
   return (
     <div className="home">
@@ -17,30 +38,20 @@ const Inicio = () => {
       </header>
       <main className="inicio-main">
         <h1>Escolha o seu mood e aproveite a trilha sonora</h1>
-        <div className="moods-grid">
-          <div className="moods-row">
-            <button
-              className="mood-box green"
-              onClick={() => navigate('/musica')}
-            >Calmo</button>
-            <button
-              className="mood-box red"
-              onClick={() => navigate('/musica')}
-            >Estressado</button>
-            <button
-              className="mood-box yellow"
-              onClick={() => navigate('/musica')}
-            >Feliz</button>
+        <div className='moods-row'>
+          <div className="moods-grid">
+            {Object.keys(moodMap).slice(0,3).map((humor) => (
+              <button className={`mood-box ${moodColorMap[humor]}`} key={humor} onClick={() => handleClick(humor)}>
+                {humor.charAt(0).toUpperCase() + humor.slice(1)}
+              </button>
+            ))}
           </div>
-          <div className="moods-row">
-            <button
-              className="mood-box purple"
-              onClick={() => navigate('/musica')}
-            >Animado</button>
-            <button
-              className="mood-box blue"
-              onClick={() => navigate('/musica')}
-            >Triste</button>
+          <div className="moods-grid second">
+            {Object.keys(moodMap).slice(3).map((humor) => (
+              <button className={`mood-box ${moodColorMap[humor]}`} key={humor} onClick={() => handleClick(humor)}>
+                {humor.charAt(0).toUpperCase() + humor.slice(1)}
+              </button>
+            ))}
           </div>
         </div>
       </main>
