@@ -19,13 +19,28 @@ const Inicio = () => {
         <h1>Escolha o seu mood e aproveite a trilha sonora</h1>
         <div className="moods-grid">
           <div className="moods-row">
-            <button className="mood-box green">Calmo</button>
-            <button className="mood-box red">Estressado</button>
-            <button className="mood-box yellow">Feliz</button>
+            <button
+              className="mood-box green"
+              onClick={() => navigate('/musica')}
+            >Calmo</button>
+            <button
+              className="mood-box red"
+              onClick={() => navigate('/musica')}
+            >Estressado</button>
+            <button
+              className="mood-box yellow"
+              onClick={() => navigate('/musica')}
+            >Feliz</button>
           </div>
           <div className="moods-row">
-            <button className="mood-box purple">Animado</button>
-            <button className="mood-box blue">Triste</button>
+            <button
+              className="mood-box purple"
+              onClick={() => navigate('/musica')}
+            >Animado</button>
+            <button
+              className="mood-box blue"
+              onClick={() => navigate('/musica')}
+            >Triste</button>
           </div>
         </div>
       </main>
