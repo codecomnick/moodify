@@ -1,3 +1,5 @@
+import React from 'react';
+import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Home from './Home';
@@ -37,9 +39,7 @@ describe('Página Home', () => {
         <Home />
       </MemoryRouter>
     );
-    const cores = ['green', 'red', 'yellow', 'purple', 'blue'];
-    cores.forEach(cor => {
-      expect(screen.getByRole('presentation', { hidden: true })).toBeInTheDocument();
-    });
+    const caixas = screen.getAllByTestId('color-box');
+    expect(caixas).toHaveLength(5);
   });
 });

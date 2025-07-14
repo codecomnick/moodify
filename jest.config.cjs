@@ -6,4 +6,5 @@ module.exports = {
     '^.+\\.[jt]sx?$': 'babel-jest',
   },
   testEnvironment: 'jsdom',
+  setupFiles: ['<rootDir>/jest.setup.js'],
 };
