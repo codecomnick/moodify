@@ -29,7 +29,7 @@ const Musica = () => {
 
     try {
       const response = await fetch(
-        `https://itunes.apple.com/search?term=${encodeURIComponent(
+        `https://corsproxy.io/?https://itunes.apple.com/search?term=${encodeURIComponent(
           termo
         )}&limit=5&media=music`
       );
