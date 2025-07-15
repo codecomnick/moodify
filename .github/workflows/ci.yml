@@ -81,7 +81,7 @@ jobs:
       - run: ls -l dist
       - run: echo "Build concluída com sucesso!"
 
-  docker_compose_deploy:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
 
@@ -99,4 +99,4 @@ jobs:
         run: docker ps
 
       - name: Derrubar containers
-        run: docker-compose down
+        run: docker compose down
