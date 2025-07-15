@@ -82,6 +82,7 @@ jobs:
       - run: echo "Build concluída com sucesso!"
 
   docker_compose_deploy:
+    name: CD - Docker Compose Deploy
     needs: build
     runs-on: ubuntu-latest
 
@@ -89,16 +90,11 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v3
 
-      - name: Instalar Docker e Docker Compose
-        run: |
-          sudo apt-get update
-          sudo apt-get install docker.io docker-compose -y
-          sudo systemctl start docker
-          sudo usermod -aG docker $USER
+      - name: Setup Docker
+        uses: docker/setup-buildx-action@v3
 
       - name: Build e subir containers com Docker Compose
-        run: |
-          docker-compose up --build -d
+        run: docker-compose up --build -d
 
       - name: Verificar containers ativos
         run: docker ps
