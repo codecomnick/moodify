@@ -13,11 +13,6 @@ export default defineConfig([
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
     ],
-    env: {
-      browser: true,
-      node: true,
-      jest: true,
-    },
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
