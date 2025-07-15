@@ -9,43 +9,36 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
+      - name: Cache npm
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm install
 
-      - name: Instalar dependências
-        run: npm install
-  
   build:
     needs: setup
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
-
-      - name: Download node_modules
-        uses: actions/download-artifact@v3
+      - name: Cache npm
+        uses: actions/cache@v3
         with:
-          name: node_modules
-          path: node_modules
-
-      - name: Build do projeto
-        run: npm run build
-
-      - name: Verificar se a build foi gerada com sucesso
-        run: ls -l dist
-      
-      - name: Mensagem de sucesso
-        run: echo "Build concluída com sucesso!"
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm install
+      - run: npm run build
+      - run: ls -l dist
+      - run: echo "Build concluída com sucesso!"
