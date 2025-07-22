@@ -1,0 +1,97 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.home-header {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.home-main {
+  position: relative; /* Para servir de referência ao login-card */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.home-main h1 {
+  font-size: 48px;
+  margin: 80px 10px 0 10px;
+}
+
+.home-main p {
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.start-button {
+  background-color: white;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.start-button:hover {
+  background-color: #999999;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.mood-colors {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;      /* Garante que a base dos blocos fique fixa */
+  width: 95%;
+  margin-top: auto;
+  gap: 20px;
+}
+
+.color-box {
+  width: 200px;
+  height: 150px;
+  border-radius: 50px 50px 0px 0px;
+  animation: pulseHeight 15s infinite ease-in-out;
+  /* Cada bloco terá seu próprio delay para simular aleatoriedade */
+}
+
+@keyframes pulseHeight {
+  0% { height: 150px; }
+  10% { height: 170px; }
+  20% { height: 160px; }
+  30% { height: 190px; }
+  40% { height: 140px; }
+  50% { height: 180px; }
+  60% { height: 170px; }
+  70% { height: 150px; }
+  80% { height: 180px; }
+  90% { height: 160px; }
+  100% { height: 150px; }
+}
+
+/* Delays diferentes simulando aleatoriedade */
+.green  { background-color: #23A550; animation-delay: 0.3s; }
+.red    { background-color: #DC3220; animation-delay: 1.1s; }
+.yellow { background-color: #EE971C; animation-delay: 2.2s; }
+.purple { background-color: #922681; animation-delay: 0.7s; }
+.blue   { background-color: #0477B9; animation-delay: 1.8s; }

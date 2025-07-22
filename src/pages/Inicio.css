@@ -1,0 +1,66 @@
+.inicio-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.inicio-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inicio-main h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 50px 0 60px 0;
+  text-align: center;
+}
+
+.moods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  justify-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.moods-grid.second {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.moods-row {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: center;
+}
+
+.mood-box {
+  width: 150px;
+  height: 150px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mood-box.green { background: #23A550; }
+.mood-box.red { background: #DC3220; }
+.mood-box.yellow { background: #EE971C;}
+.mood-box.purple { background: #922681; }
+.mood-box.blue { background: #0477B9; }
+
+.mood-box:hover {
+  transform: scale(1.07);
+}
