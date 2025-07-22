@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="home">
       <header className="home-header">
-        <div className="logo">:): Moodify</div>
+        <div className="logo">:): Moodify - Teste</div>
       </header>
       <main className="home-main">
         <h1>Transforme seu humor em música!</h1>
